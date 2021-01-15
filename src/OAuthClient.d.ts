@@ -5,88 +5,88 @@
 export = intuit_oauth;
 
 declare class intuit_oauth {
-    constructor(config: any);
+  constructor(config: any);
 
-    authHeader(): any;
+  authHeader(): any;
 
-    authorizeUri(params: any): any;
+  authorizeUri(params: any): any;
 
-    createError(e: any, authResponse: any): any;
+  createError(e: any, authResponse: any): any;
 
-    createToken(uri: any): any;
+  createToken(uri: any): any;
 
-    getKeyFromJWKsURI(id_token: any, kid: any, request: any): any;
+  getKeyFromJWKsURI(id_token: any, kid: any, request: any): any;
 
-    getPublicKey(modulus: any, exponent: any): any;
+  getPublicKey(modulus: any, exponent: any): any;
 
-    getToken(): any;
+  getToken(): any;
 
-    getTokenRequest(request: any): any;
+  getTokenRequest(request: any): any;
 
-    getUserInfo(): any;
+  getUserInfo(): any;
 
-    isAccessTokenValid(): any;
+  isAccessTokenValid(): any;
 
-    loadResponse(request: any): any;
+  loadResponse(request: any): any;
 
-    loadResponseFromJWKsURI(request: any): any;
+  loadResponseFromJWKsURI(request: any): any;
 
-    log(level: any, message: any, messageData: any): void;
+  log(level: any, message: any, messageData: any): void;
 
-    makeApiCall(params: any): any;
+  makeApiCall(params: any): any;
 
-    refresh(): any;
+  refresh(): any;
 
-    refreshUsingToken(refresh_token: any): any;
+  refreshUsingToken(refresh_token: any): any;
 
-    revoke(params: any): any;
+  revoke(params: any): any;
 
-    setAuthorizeURLs(params: any): any;
+  setAuthorizeURLs(params: any): any;
 
-    setToken(params: any): any;
+  setToken(params: any): any;
 
-    validateIdToken(params: any): any;
+  validateIdToken(params: any): any;
 
-    validateToken(): void;
+  validateToken(): void;
 
-    static authorizeEndpoint: string;
+  static authorizeEndpoint: string;
 
-    static cacheId: string;
+  static cacheId: string;
 
-    static environment: {
-        production: string;
-        sandbox: string;
-    };
+  static environment: {
+    production: string;
+    sandbox: string;
+  };
 
-    static jwks_uri: string;
+  static jwks_uri: string;
 
-    static migrate_production: string;
+  static migrate_production: string;
 
-    static migrate_sandbox: string;
+  static migrate_sandbox: string;
 
-    static revokeEndpoint: string;
+  static revokeEndpoint: string;
 
-    static scopes: {
-        Accounting: string;
-        Address: string;
-        Benefits: string;
-        Email: string;
-        Intuit_name: string;
-        OpenId: string;
-        Payment: string;
-        Payroll: string;
-        Phone: string;
-        Profile: string;
-        TimeTracking: string;
-    };
+  static scopes: {
+    Accounting: string;
+    Address: string;
+    Benefits: string;
+    Email: string;
+    Intuit_name: string;
+    OpenId: string;
+    Payment: string;
+    Payroll: string;
+    Phone: string;
+    Profile: string;
+    TimeTracking: string;
+  };
 
-    static tokenEndpoint: string;
+  static tokenEndpoint: string;
 
-    static user_agent: string;
+  static user_agent: string;
 
-    static userinfo_endpoint_production: string;
+  static userinfo_endpoint_production: string;
 
-    static userinfo_endpoint_sandbox: string;
+  static userinfo_endpoint_sandbox: string;
 
 }
 
