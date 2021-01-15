@@ -94,8 +94,8 @@ declare interface OAuthClientConfig {
   appKey?: string;
   appSecret?: string;
   clientId: string;
-  clientSecret: 'production' | 'sandbox';
-  environment: string;
+  clientSecret: string;
+  environment: 'production' | 'sandbox';
   logging?: boolean;
   redirectUri: string;
 }
