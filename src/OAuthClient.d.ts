@@ -5,7 +5,7 @@
 export = intuit_oauth;
 
 declare class intuit_oauth {
-  constructor(config: any);
+  constructor(config: OAuthClientConfig);
 
   authHeader(): any;
 
@@ -90,3 +90,12 @@ declare class intuit_oauth {
 
 }
 
+declare interface OAuthClientConfig {
+  appKey?: string;
+  appSecret?: string;
+  clientId: string;
+  clientSecret: 'production' | 'sandbox';
+  environment: string;
+  logging?: boolean;
+  redirectUri: string;
+}
