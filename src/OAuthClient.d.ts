@@ -9,7 +9,7 @@ declare class OAuthClient {
 
   authHeader(): any;
 
-  authorizeUri(params: any): any;
+  authorizeUri(params: AuthorizeURIConfig): string;
 
   createError(e: any, authResponse: any): any;
 
@@ -98,4 +98,9 @@ declare interface OAuthClientConfig {
   environment: 'production' | 'sandbox';
   logging?: boolean;
   redirectUri: string;
+}
+
+declare interface AuthorizeURIConfig {
+  scope: Array<string>;
+  state: string;
 }
